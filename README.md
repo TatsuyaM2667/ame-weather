@@ -15,7 +15,7 @@ ame-kuraokami: 今の天気を wttr.in から取ってくる。
   ame-kuraokami --json [-l 言葉] [場所]   {"temp","condition","symbol","icon","place"} の 1 行
 
 場所を省くと IP アドレスから推定。言葉は既定 ja(wttr.in の lang)。icon は Nerd Font の天気のアイコン(夜は月)。
-終了コード: 0 取れた / 1 場所が分からない・返事の形が違う / 2 つながらない(curl が要る)
+終了コード: 0 取れた / 1 場所が分からない・返事の形が違う / 2 つながらない(ame-yatagarasu が要る)
 ```
 
 ## ビルド
@@ -25,7 +25,7 @@ zig build -Doptimize=ReleaseSafe   # zig-out/bin/ame-kuraokami(Zig 0.13、libc �
 zig build test
 ```
 
-実行に要るもの: `curl`
+実行に要るもの: `ame-yatagarasu`
 
 ## このリポジトリについて
 
